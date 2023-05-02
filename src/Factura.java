@@ -48,7 +48,7 @@ public class Factura {
             case 'e':
                 System.out.println("Ingrese la cantidad de Radiadores que desea facturar");
                 cantidad = sc.nextInt();
-                this.radiador =  new Producto("llantas", 120,105,10,cantidad);
+                this.radiador =  new Producto("Radiador", 120,105,10,cantidad);
                 break;
             default:
                 System.out.println("la opción elegida no es válida");
@@ -85,21 +85,21 @@ public class Factura {
     public void imprimirFactura(){
         System.out.println("Nombre del cliente: "+cliente.getNombre());
         System.out.println("Cédula del cliente: "+cliente.getCedula());
-        System.out.println("Producto        cantidad        precio           total");
+        System.out.println("Producto                    cantidad        precio           total");
         if(llantas.getCantidad()>0){
-            System.out.println(llantas.getNombre()+"       "+llantas.getCantidad()+"        "+llantas.getPrecio()+"         "+llantas.obtenerTotal());
+            System.out.println(llantas.getNombre()+"               "+llantas.getCantidad()+"        "+llantas.getPrecio()+"         "+llantas.obtenerTotal());
         }
         if(kitFrenos.getCantidad()>0){
-            System.out.println(kitFrenos.getNombre()+"       "+kitFrenos.getCantidad()+"        "+kitFrenos.getPrecio()+"         "+kitFrenos.obtenerTotal());
+            System.out.println(kitFrenos.getNombre()+"  "+kitFrenos.getCantidad()+"        "+kitFrenos.getPrecio()+"         "+kitFrenos.obtenerTotal());
         }
         if(kitEmbrague.getCantidad()>0){
-            System.out.println(kitEmbrague.getNombre()+"       "+kitEmbrague.getCantidad()+"        "+kitEmbrague.getPrecio()+"         "+kitEmbrague.obtenerTotal());
+            System.out.println(kitEmbrague.getNombre()+"    "+kitEmbrague.getCantidad()+"        "+kitEmbrague.getPrecio()+"         "+kitEmbrague.obtenerTotal());
         }
         if(faros.getCantidad()>0){
-            System.out.println(faros.getNombre()+"      "+faros.getCantidad()+"        "+faros.getPrecio()+"         "+faros.obtenerTotal());
+            System.out.println(faros.getNombre()+"               "+faros.getCantidad()+"        "+faros.getPrecio()+"         "+faros.obtenerTotal());
         }
         if(radiador.getCantidad()>0){
-            System.out.println(radiador.getNombre()+"       "+radiador.getCantidad()+"        "+radiador.getPrecio()+"         "+radiador.obtenerTotal());
+            System.out.println(radiador.getNombre()+"               "+radiador.getCantidad()+"        "+radiador.getPrecio()+"         "+radiador.obtenerTotal());
         }
         System.out.println("El subtotal es: "+this.subtotal);
         System.out.println("El total es:"+this.total);
